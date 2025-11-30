@@ -18,18 +18,25 @@
         background: #c1a8cb;
         border-radius: 100px;
         display: flex;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
       }
-      #navBarText {
-        display: flex; 
-        flex-direction: row;
-      }
-      #navBarText li {
-        
-      }
-      #navBarText a {
+
+      .navBar ul {
         list-style: none;
+        display: flex;
+        gap: 100px;
+        margin-right: 100px;
+        padding: 15px;
+      }
+      
+      .navBar a {
+        text-decoration: none;
+        color: #FAFAFA;
+      }
+      
+      .navBar a:active {
+        color: #E85395;
       }
       
     </style>
@@ -37,7 +44,7 @@
   <body>
     <!-- Navigation Bar -->
     <div class="navBar">
-      <ul id="navBarText">
+      <ul>
         <li><a href="#statistics_overview">STATISTICS OVERVIEW</a></li>
         <li><a href="#songs">SONGS</a></li>
         <li><a href="#artists">ARTISTS</a></li>
