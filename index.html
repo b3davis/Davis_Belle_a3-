@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>Belle’s Music Unraveled</title>
+    <!-- Google Fonts: Outfit & Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
       html {
         width: 1440px;
@@ -16,6 +20,7 @@
       
       .navBar {
         background: #c1a8cb;
+        font-family: "Outfit", sans-serif;
         border-radius: 100px;
         display: flex;
         justify-content: right;
@@ -24,6 +29,7 @@
         top: 50px;
         margin-left: 150px;
         margin-right: 50px;
+        
       }
 
       .navBar ul {
@@ -31,7 +37,7 @@
         display: flex;
         gap: 100px;
         margin-right: 40px;
-        padding: 15px;
+        padding: 25px;
       }
       
       .navBar a {
@@ -41,6 +47,13 @@
       
       .navBar a:active {
         color: #E85395;
+      }
+      
+      #navBarPhoto {
+        position: sticky;
+        top: 0px;
+        margin-left: 75px;
+        margin-top: -95px;
       }
       
       .statsOverview {
@@ -65,6 +78,7 @@
       .genres {
         height: 853px;
       }
+      
     </style>
   </head>
   <body>
@@ -77,6 +91,9 @@
         <li><a href="#albums">ALBUMS</a></li>
         <li><a href="#genres">GENRES</a></li>
       </ul>
+    </div>
+    <div id="navBarPhoto">
+        <img src="BelleHeadphonesPink.png" alt="Pink line-art illustration of headphones with the name 'Belle.' The cord creates a horizontal line that underlines the navigation bar." width="1075px">
     </div>
     <!-- STATISTICS OVERVIEW -->
     <div class="statsOverview">
