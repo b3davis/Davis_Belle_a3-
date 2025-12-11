@@ -2,31 +2,31 @@
 <html lang="en-CA">
   <head>
     <meta charset="UTF-8">
-    
+
     <!-- General Statement:
     While building this website, I frequently referenced W3Schools. -->
-    
+
     <title>Belle’s Music Unraveled</title>
-    
+
     <!-- Google Fonts: Outfit & Space Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
+
     <style>
-    /* LAYOUT SETUP */
+      /* LAYOUT SETUP */
       html {
         width: 1440px;
         background-color: white;
       }
-      
-      body{
+
+      body {
         background-color: #2C2C2C;
         width: 1200px;
         margin: 0 auto;
       }
-      
-    /* NAVIGATION BAR */ 
+
+      /* NAVIGATION BAR */
       .navBar {
         font-family: "Outfit", sans-serif;
         background-color: #c1a8cb;
@@ -37,7 +37,8 @@
         top: 60px;
         justify-content: right;
         position: sticky;
-        z-index: 2; /* NOTE ON Z-INDEX
+        z-index: 2;
+        /* NOTE ON Z-INDEX
         I used ChatGPT to help troubleshoot an issue where the navigation bar was being hidden under the transformed image elements. 
         It gave me a solution that layers the navigation bar over elements with an index of 1. */
       }
@@ -50,48 +51,48 @@
         padding: 20px;
         font-weight: 400;
       }
-      
+
       .navBar a {
         text-decoration: none;
         color: #FAFAFA;
       }
-      
+
       .navBar a:active {
         color: #E85395;
       }
-      
+
       #navBarPhoto {
         pointer-events: none;
         transform: scale(0.8);
-  		transform-origin: top left;
+        transform-origin: top left;
         top: 35px;
         margin-top: -100px;
         margin-left: 14%;
         position: sticky;
         z-index: 2;
       }
-      
-    /* STATISTICS OVERVIEW: WEBSITE LANDING CONTENT */ 
+
+      /* STATISTICS OVERVIEW: WEBSITE LANDING CONTENT */
       .statsOverview {
         height: 765px;
         margin-left: 30px;
         margin-right: 30px;
       }
-      
+
       .websiteTitleSubhead {
         display: flex;
         justify-content: center;
         position: relative;
         padding: 75px;
       }
-      
+
       .statsTitle {
         display: flex;
         position: absolute;
         right: 485px;
         top: 90px;
       }
-      
+
       .statsOverview h1 {
         color: #E85395;
         font-family: "Space Mono", monospace;
@@ -107,20 +108,20 @@
       }
 
       #noteTop {
-      	position: absolute;
-      	left: -5px;
+        position: absolute;
+        left: -5px;
         top: -75px;
         transform: scale(-0.8, -0.8);
         z-index: 1;
       }
-      
+
       #noteBottom {
         position: absolute;
         right: -5px;
         bottom: 0px;
         transform: scale(0.8);
       }
-    
+
       #statsSubhead {
         color: #FF9071;
         font-family: "Outfit", sans-serif;
@@ -129,12 +130,12 @@
         position: absolute;
         margin-top: 20px;
       }
-      
+
       #statsSubhead a {
         color: #FF9071;
       }
-      
-    .statsQuestionEmail {
+
+      .statsQuestionEmail {
         font-family: "Outfit", sans-serif;
         border: 2px solid #FAFAFA;
         padding: 16px 24px;
@@ -144,43 +145,43 @@
         right: 40px;
         top: 40px;
       }
-      
+
       #statsQuestion {
         color: #FAFAFA;
         font-weight: 400;
         font-size: 24px;
         margin: auto;
       }
-      
+
       #statsEmail {
         color: #C1A8CB;
         font-weight: 300;
         font-size: 20px;
         margin: auto;
       }
-      
+
       #statsEmail a {
         color: #C1A8CB;
       }
-      
+
       #statsArrow {
-       position: absolute;
-       left: 50px;
-       top: 75px;
+        position: absolute;
+        left: 50px;
+        top: 75px;
       }
 
-    /* STATISTICS OVERVIEW: GRID  */ 
+      /* STATISTICS OVERVIEW: GRID  */
       #statsTextBorderSolid {
         border: 2px solid #FAFAFA;
         margin: 40px;
         padding: 25px;
       }
-      
+
       #statsTextBorderDot {
         border: 10px dotted #FAFAFA;
         padding: 20px;
       }
-      
+
       .statsText {
         background-color: #C1A8CB;
         display: grid;
@@ -196,14 +197,15 @@
         font-family: "Outfit", sans-serif;
         font-size: 43px;
         font-weight: 600;
-        grid-column: 1 / -1; /* NOTE ON GRID-COLUMN
+        grid-column: 1 / -1;
+        /* NOTE ON GRID-COLUMN
         I used ChatGPT to help align the Statistics Overview title in the center of the grid at the top. 
         It gave me a solution that positions the element by spanning it from the first column (1) to the last column (-1),
         allowing it to remain in the same div as the content and share the same purple background. */
         height: 10px;
         margin-top: 10px;
       }
-      
+
       .statItem {
         background-color: #2C2C2C;
         border: 3px solid #FAFAFA;
@@ -233,392 +235,394 @@
       }
 
       .pink {
-      	color: #E85395; 
+        color: #E85395;
       }
+
       .orange {
-      	color: #FF9071;
+        color: #FF9071;
       }
+
       .purple {
-      	color: #C1A8CB;
+        color: #C1A8CB;
       }
-    
-    /* PAGE DIVIDER */
+
+      /* PAGE DIVIDER */
       #statsStar {
-    	float: right;
-    	margin-top: -117px;
+        float: right;
+        margin-top: -117px;
       }
-      
-	/* SONGS */ 
+
+      /* SONGS */
       .songs {
         height: 925px;
         background-color: #ED96BC;
         color: #FAFAFA;
       }
-      
+
       .songs h2 {
         font-family: "Outfit", sans-serif;
-      	font-size: 43px;
-      	font-weight: 600;
-      	position: relative;
-  		left: 44%;
-  		top: 90px;
+        font-size: 43px;
+        font-weight: 600;
+        position: relative;
+        left: 44%;
+        top: 90px;
       }
-      
+
       .songNumbersGrid {
-      	display: grid;
-      	grid-template-columns: auto auto auto auto;
-      	gap: 20%;
-      	position: relative;
-      	right: -170px;
-      	top: 50px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20%;
+        position: relative;
+        right: -170px;
+        top: 50px;
       }
-      
+
       .songNumber {
-      	background-color: #C1A8CB;
-      	font-family: "Outfit", sans-serif;
-      	font-size: 32px;
-      	font-weight: 600;
-      	text-align: center;
-      	width: 45px;
-      	height: 45px;
+        background-color: #C1A8CB;
+        font-family: "Outfit", sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        width: 45px;
+        height: 45px;
       }
-      
+
       .songGrid {
-    	display: grid;
-    	grid-template-columns: auto auto auto auto;
-    	gap: 22px;
-    	margin-left: 70px;
-    	width: 500px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 22px;
+        margin-left: 70px;
+        width: 500px;
       }
-      
+
       .pinkBackground {
-      	padding: 22px;
-      	border: 2px solid #FAFAFA;
-      	background-color: #E85395;
+        padding: 22px;
+        border: 2px solid #FAFAFA;
+        background-color: #E85395;
       }
-      
+
       .orangeBackground {
-      	padding: 22px;
-      	border: 2px solid #FAFAFA;
-      	background-color: #FF9071;
+        padding: 22px;
+        border: 2px solid #FAFAFA;
+        background-color: #FF9071;
       }
-      
+
       .songsTitle {
-      	font-family: "Space Mono", monospace;
-      	font-size: 24px;
-      	font-weight: 200;
+        font-family: "Space Mono", monospace;
+        font-size: 24px;
+        font-weight: 200;
       }
-      
+
       .songsArtist {
-      	font-family: "Space Mono", monospace;
-      	font-style: italic;
-      	font-size: 18px;
-      	font-weight: 200;
+        font-family: "Space Mono", monospace;
+        font-style: italic;
+        font-size: 18px;
+        font-weight: 200;
       }
-      
+
       .songsTime {
-      	font-family: "Outfit", sans-serif;
-      	font-size: 16px;
-      	font-weight: 300;
+        font-family: "Outfit", sans-serif;
+        font-size: 16px;
+        font-weight: 300;
       }
-      
+
       .songsContent {
-      	font-family: "Outfit", sans-serif;
-      	font-size: 16px;
-      	font-weight: 200;
+        font-family: "Outfit", sans-serif;
+        font-size: 16px;
+        font-weight: 200;
       }
 
       #songsDotLine {
-     	float: left;
-      	margin-left: 12.7%;
-      	margin-top: -26px;
+        float: left;
+        margin-left: 12.7%;
+        margin-top: -26px;
       }
 
-	/* ARTISTS */ 
+      /* ARTISTS */
       .artists {
         background-color: #FAFAFA;
         height: 925px;
         color: #2C2C2C;
       }
-      
+
       .artists h2 {
         font-family: "Outfit", sans-serif;
-      	font-size: 43px;
-      	font-weight: 600;
-      	padding-top: 50px;
-      	padding-left: 44%;
-      	margin-top: 0;
+        font-size: 43px;
+        font-weight: 600;
+        padding-top: 50px;
+        padding-left: 44%;
+        margin-top: 0;
       }
-      
+
       .artistNumbersGrid {
-      	display: grid;
-      	grid-template-columns: auto auto;
-      	row-gap: 213px;
-      	width: 995px;
-      	position: relative;
-      	left: 110px;
-      	bottom: 741px;
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 213px;
+        width: 995px;
+        position: relative;
+        left: 110px;
+        bottom: 741px;
       }
-      
+
       .artistNumber {
-      	background-color: #C1A8CB;
-      	color: #FAFAFA;
-      	font-family: "Outfit", sans-serif;
-      	font-size: 36px;
-      	font-weight: 600;
-      	text-align: center;
-      	width: 50px;
-      	height: 50px;
+        background-color: #C1A8CB;
+        color: #FAFAFA;
+        font-family: "Outfit", sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+        width: 50px;
+        height: 50px;
       }
-      
+
       .artistItemGrid {
         display: grid;
-    	grid-template-columns: auto auto;
-    	gap: 15px;
-    	width: 980px;
-    	position: relative;
-      	right: -70px;
-      	bottom: 10px;
-      	border: 15px dotted #2C2C2C;
-      	padding: 25px;
+        grid-template-columns: auto auto;
+        gap: 15px;
+        width: 980px;
+        position: relative;
+        right: -70px;
+        bottom: 10px;
+        border: 15px dotted #2C2C2C;
+        padding: 25px;
       }
-      
+
       .artistItem {
         border: 20px solid #2C2C2C;
-    	background-color: #FAFAFA;
-    	padding: 20px;
-    	max-height: 240px;
+        background-color: #FAFAFA;
+        padding: 20px;
+        max-height: 240px;
       }
-      
+
       .artistName {
-      	font-family: "Outfit", sans-serif;
-      	font-size: 24px;
-      	font-weight: 300;
-      	position: relative;
-      	text-align: center;
-      	left: -110px;
-      	bottom: 20px;
+        font-family: "Outfit", sans-serif;
+        font-size: 24px;
+        font-weight: 300;
+        position: relative;
+        text-align: center;
+        left: -110px;
+        bottom: 20px;
       }
-     
+
       .artistStatsTitle {
         font-family: "Space Mono", monospace;
-      	font-style: italic;
+        font-style: italic;
         font-size: 16px;
-      	font-weight: 800;
-      	text-align: center;
-      	position: relative;
-      	left: 125px;
-      	bottom: 270px;
-      	
+        font-weight: 800;
+        text-align: center;
+        position: relative;
+        left: 125px;
+        bottom: 270px;
+
       }
-      
+
       .aritstStats {
         font-family: "Outfit", sans-serif;
-      	font-size: 16px;
-      	font-weight: 300;
-      	text-align: center;
-      	position: relative;
-      	left: 125px;
-      	bottom: 280px;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        position: relative;
+        left: 125px;
+        bottom: 280px;
       }
-      
+
       .artistLine {
-      	border-left: 2px solid #2C2C2C;
-      	height: 240px;
-      	position: relative;
-      	left: 230px;
-      	bottom: 525px;
+        border-left: 2px solid #2C2C2C;
+        height: 240px;
+        position: relative;
+        left: 230px;
+        bottom: 525px;
       }
-      
+
       #artistDotLine {
-      	float: left;
-      	transform: scaleX(-1);
-      	margin-left: 12.7%;
-      	margin-top: -26px;
-      	z-index: 1;
+        float: left;
+        transform: scaleX(-1);
+        margin-left: 12.7%;
+        margin-top: -26px;
+        z-index: 1;
       }
-   
-	/* ALBUMS */
+
+      /* ALBUMS */
       .albums {
         height: 925px;
         background-color: #ED96BC;
         color: #FAFAFA;
       }
-      
+
       .albums h2 {
         font-family: "Outfit", sans-serif;
-      	font-size: 43px;
-      	font-weight: 600;
-      	padding-top: 70px;
-      	padding-left: 44%;
-      	margin-top: 0;
+        font-size: 43px;
+        font-weight: 600;
+        padding-top: 70px;
+        padding-left: 44%;
+        margin-top: 0;
       }
-      
+
       .albumGrid {
         display: grid;
-    	grid-template-columns: auto auto auto;
-    	gap: 30px;
-    	width: 980px;
-    	position: relative;
-      	left: 70px;
+        grid-template-columns: auto auto auto;
+        gap: 30px;
+        width: 980px;
+        position: relative;
+        left: 70px;
       }
-      
+
       .albumItem {
-      	width: 335px;
-      	height: 315px;
+        width: 335px;
+        height: 315px;
       }
-      
+
       .pink2ndBackground {
-      	background-color: #E85395;
+        background-color: #E85395;
       }
-      
+
       .orange2ndBackground {
-      	background-color: #FF9071;
+        background-color: #FF9071;
       }
-      
+
       .blackBackground {
-      	background-color: #2C2C2C;
+        background-color: #2C2C2C;
       }
-      
+
       .albumItem img {
-      	position: relative;
-      	left: 20%;
-      	top: 20%;
+        position: relative;
+        left: 20%;
+        top: 20%;
       }
-      
+
       .albumStats {
         font-family: "Outfit", sans-serif;
-      	font-size: 16px;
-      	font-weight: 300;
-      	position: relative;
-      	left: 20%;
-      	bottom: 62%;
+        font-size: 16px;
+        font-weight: 300;
+        position: relative;
+        left: 20%;
+        bottom: 62%;
       }
-      
+
       .albumNameSingle {
         font-family: "Space Mono", monospace;
         font-size: 32px;
         font-weight: 200;
         position: relative;
-      	left: 5%;
-      	bottom: 17%;
+        left: 5%;
+        bottom: 17%;
       }
-      
+
       .albumNameDouble {
         font-family: "Space Mono", monospace;
         font-size: 32px;
         font-weight: 200;
         position: relative;
-      	left: 5%;
-      	bottom: 32%;
+        left: 5%;
+        bottom: 32%;
       }
-      
+
       .albumArtistSingle {
         font-family: "Space Mono", monospace;
-      	font-style: italic;
+        font-style: italic;
         font-size: 16px;
         font-weight: 300;
         position: relative;
-      	left: 5%;
-      	bottom: 25%;
+        left: 5%;
+        bottom: 25%;
       }
-      
+
       .albumArtistDouble {
         font-family: "Space Mono", monospace;
-      	font-style: italic;
+        font-style: italic;
         font-size: 16px;
         font-weight: 300;
         position: relative;
-      	left: 5%;
-      	bottom: 41%;
+        left: 5%;
+        bottom: 41%;
       }
-      
+
       .albumNumberSingle {
         font-family: "Outfit", sans-serif;
-      	font-size: 68px;
-      	font-weight: 600;
-      	position: relative;
-      	left: 85%;
-      	bottom: 70%;
+        font-size: 68px;
+        font-weight: 600;
+        position: relative;
+        left: 85%;
+        bottom: 70%;
       }
-      
+
       .albumNumberDouble {
         font-family: "Outfit", sans-serif;
-      	font-size: 68px;
-      	font-weight: 600;
-      	position: relative;
-      	left: 85%;
-      	bottom: 85%;
+        font-size: 68px;
+        font-weight: 600;
+        position: relative;
+        left: 85%;
+        bottom: 85%;
       }
-      
+
       #albumStar {
-      	float: left;
-      	transform: scaleX(-1);
-      	margin-top: -153px;
-      	z-index: 1;
+        float: left;
+        transform: scaleX(-1);
+        margin-top: -153px;
+        z-index: 1;
       }
-     
-	/* GENRES */
-     .genres {
+
+      /* GENRES */
+      .genres {
         height: 800px;
       }
-      
-     #sheetMusic {
-      	background: #FAFAFA;
-      	padding-top: 2%;
-      	margin-top: 10%;
-      	margin-left: 60px;
-      	margin-right: 60px;
+
+      #sheetMusic {
+        background: #FAFAFA;
+        padding-top: 2%;
+        margin-top: 10%;
+        margin-left: 60px;
+        margin-right: 60px;
       }
-      
+
       #sheetMusic ol {
-      	margin: -90px;
+        margin: -90px;
       }
-      
+
       .genres h2 {
-      	font-family: "Outfit", sans-serif;
-      	font-size: 43px;
-      	font-weight: 600;
-      	color: #2C2C2C;
-      	display: flex;
-      	justify-content: center;
-      	margin-bottom: 5px;
+        font-family: "Outfit", sans-serif;
+        font-size: 43px;
+        font-weight: 600;
+        color: #2C2C2C;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
       }
-      
+
       .genreNumber {
-      	font-family: "Outfit", sans-serif;
-      	font-size: 22px;
-      	font-weight: 800;
+        font-family: "Outfit", sans-serif;
+        font-size: 22px;
+        font-weight: 800;
       }
-      
+
       .genreLabel {
         font-family: "Space Mono", monospace;
         font-style: italic;
         font-size: 28px;
         font-weight: 300;
       }
-      
+
       #genre1 {
         display: flex;
         position: relative;
         top: -310px;
         left: 300px;
       }
-      
+
       #genre2 {
         display: flex;
         position: relative;
         top: -285px;
         left: 527px;
       }
-      
+
       #genre3 {
         display: flex;
         position: relative;
         top: -260px;
         left: 623px;
       }
-      
+
       #genre4 {
         display: flex;
         position: relative;
@@ -639,9 +643,9 @@
       </ul>
     </div>
     <div id="navBarPhoto">
-    	<img src="BelleHeadphonesPink.png" alt="Pink line-art illustration of headphones with the name 'Belle.' The cord creates a horizontal line that underlines the navigation bar." width="1060px">
+      <img src="BelleHeadphonesPink.png" alt="Pink line-art illustration of headphones with the name 'Belle.' The cord creates a horizontal line that underlines the navigation bar." width="1060px">
     </div>
-    
+
     <!-- STATISTICS OVERVIEW -->
     <div class="statsOverview" id="statistics_overview">
       <div class="websiteTitleSubhead">
@@ -658,12 +662,12 @@
           <div id="statsArrow"><img src="Arrow.png" alt="Purple arrow, pointing to the right." width="20px"></div>
         </div>
       </div>
-     	
+
       <div id="statsTextBorderSolid">
         <div id="statsTextBorderDot">
           <div class="statsText">
             <h2 id="statsTitle">Statistics Overview</h2>
-            
+
             <div class="statItem">
               <div class="statNumber pink">185,784</div>
               <div class="statLabel">Number of Streams</div>
@@ -686,208 +690,224 @@
 
             <div class="statItem">
               <div class="statNumber orange">14,656</div>
-              <div class="statLabel">Artists Streamed</div>	
+              <div class="statLabel">Artists Streamed</div>
             </div>
 
             <div class="statItem">
               <div class="statNumber purple">387</div>
-              <div class="statLabel">Days Streamed</div>	
+              <div class="statLabel">Days Streamed</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <div id="statsStar">
-    	<img src="Star.png" alt="Pink, white, and orange star." width="300">
+      <img src="Star.png" alt="Pink, white, and orange star." width="300">
     </div>
-    
+
     <!-- SONGS -->
     <div class="songs" id="songs">
-    	<h2>Songs</h2>
-    
-    	<div class="songNumbersGrid">
-    		<p class="songNumber">1</p>
-    		<p class="songNumber">2</p>
-    		<p class="songNumber">3</p>
-    		<p class="songNumber">4</p>
-    	</div>
-    	
-    	<div class="songGrid">
-    		<div class="pinkBackground">
-    			<img src="SecondLife.png" alt="Album cover of Second Life by kitty ray. Exploding purple heart with album title 'Frost Bite' and aritst name." width="200px">
-    			<p class="songsTitle">Second Life</p>
-    			<p class="songsArtist">by kitty ray</p>
-    			<p class="songsTime">1,464 minutes | 406 streams</p>
-    			<p class="songsContent">I’d describe this song as ethereal and romantic, with DnB influences and delicate electronic trills. It feels so light and airy that it almost makes me feel like I’m floating. I especially resonate with the lyric, “You make me this quiet thing that I’m not used to being.”</p>
-    		</div>
-    		<div class="orangeBackground">
-    	    	<img src="CigarettesOutTheWindow.png" alt="Album cover of Cigarettes out the Window by TV Girl. Blue man, embracing a pink woman." width="200px">
-    			<p class="songsTitle">Cigarettes out the Window</p>
-    			<p class="songsArtist">by TV Girl</p>
-    			<p class="songsTime">1,055 minutes | 351 streams</p>
-    			<p class="songsContent">This indie pop song makes me want to dance in a soft, swaying motion, especially as the melody bounces between the left and right ear like an echo. It has a subtle, nostalgic energy that I admire.</p>
-    		</div>
-    		<div class="pinkBackground">
-    	    	<img src="OhYuh.png" alt="Album cover of Oh Yuh by Kempachii. Pink cherry blossom tree." width="200px">
-    			<p class="songsTitle">Oh Yuh</p>
-    			<p class="songsArtist">by Kempachii</p>
-    			<p class="songsTime">633 minutes | 335 streams</p>
-    			<p class="songsContent">This hip-hop song with electronic elements has a solid beat that’s easy to bop along to. Unfortunately, it got in my rotation during my chronically online era. Looking back now, the lyrics are honestly so ridiculous that I’m embarrassed it ended up in my top songs.</p>
-    		</div>
-    		<div class="orangeBackground">
-    	    	<img src="FoundFootage.png" alt="Album cover of Oh Yuh by Kempachii. Pink cherry blossom tree." width="200px">
-    			<p class="songsTitle">Found Footage</p>
-    			<p class="songsArtist">by Take/Five</p>
-    			<p class="songsTime">308 minutes | 321 streams</p>
-    			<p class="songsContent">This liminal and inspiring album intro blends a soft music box melody with the moon landing audio and a podcast clip about failure. It has become a motivator for me when life gets tough, especially with the line, “But failure is one of the most important things you could ever have.”</p>
-    		</div>
-    	</div>
-	</div>
-    
-    <div id="songsDotLine">
-    	<img src="DotLine.png" alt="Line of multicolored dots, each split into two different colors." width="900px">
+      <h2>Songs</h2>
+
+      <div class="songNumbersGrid">
+        <p class="songNumber">1</p>
+        <p class="songNumber">2</p>
+        <p class="songNumber">3</p>
+        <p class="songNumber">4</p>
+      </div>
+
+      <div class="songGrid">
+        <div class="pinkBackground">
+          <img src="SecondLife.png" alt="Album cover of Second Life by kitty ray. Exploding purple heart with album title 'Frost Bite' and aritst name." width="200px">
+          <p class="songsTitle">Second Life</p>
+          <p class="songsArtist">by kitty ray</p>
+          <p class="songsTime">1,464 minutes | 406 streams</p>
+          <p class="songsContent">I’d describe this song as ethereal and romantic, with DnB influences and delicate electronic trills. It feels so light and airy that it almost makes me feel like I’m floating. I especially resonate with the lyric, “You make me this quiet thing that I’m not used to being.”</p>
+        </div>
+        <div class="orangeBackground">
+          <img src="CigarettesOutTheWindow.png" alt="Album cover of Cigarettes out the Window by TV Girl. Blue man, embracing a pink woman." width="200px">
+          <p class="songsTitle">Cigarettes out the Window</p>
+          <p class="songsArtist">by TV Girl</p>
+          <p class="songsTime">1,055 minutes | 351 streams</p>
+          <p class="songsContent">This indie pop song makes me want to dance in a soft, swaying motion, especially as the melody bounces between the left and right ear like an echo. It has a subtle, nostalgic energy that I admire.</p>
+        </div>
+        <div class="pinkBackground">
+          <img src="OhYuh.png" alt="Album cover of Oh Yuh by Kempachii. Pink cherry blossom tree." width="200px">
+          <p class="songsTitle">Oh Yuh</p>
+          <p class="songsArtist">by Kempachii</p>
+          <p class="songsTime">633 minutes | 335 streams</p>
+          <p class="songsContent">This hip-hop song with electronic elements has a solid beat that’s easy to bop along to. Unfortunately, it got in my rotation during my chronically online era. Looking back now, the lyrics are honestly so ridiculous that I’m embarrassed it ended up in my top songs.</p>
+        </div>
+        <div class="orangeBackground">
+          <img src="FoundFootage.png" alt="Album cover of Oh Yuh by Kempachii. Pink cherry blossom tree." width="200px">
+          <p class="songsTitle">Found Footage</p>
+          <p class="songsArtist">by Take/Five</p>
+          <p class="songsTime">308 minutes | 321 streams</p>
+          <p class="songsContent">This liminal and inspiring album intro blends a soft music box melody with the moon landing audio and a podcast clip about failure. It has become a motivator for me when life gets tough, especially with the line, “But failure is one of the most important things you could ever have.”</p>
+        </div>
+      </div>
     </div>
-    
+
+    <div id="songsDotLine">
+      <img src="DotLine.png" alt="Line of multicolored dots, each split into two different colors." width="900px">
+    </div>
+
     <!-- ARTISTS -->
     <div class="artists" id="artists">
-    	<h2>Artists</h2>
-    	
-    	<div class="artistItemGrid">
-    		<div class="artistItem">
-    			<img src="ArianaGrande.png" alt="Picture of the singer Ariana Grande clasping her hands, with a blue light highlighting her face." width="200px">
-    			<p class="artistName">Ariana Grande</p>
-    			<p class="artistStatsTitle">Statistics</p>
-    			<p class="aritstStats">4,508 minutes<br>1,503 streams</p>
-    			<p class="artistStatsTitle">First Streamed</p>
-    			<p class="aritstStats">April 2017</p>
-    			<p class="artistStatsTitle">Favourite Song</p>
-    			<p class="aritstStats">Forever Boy</p>
-    			<div class="artistLine"></div>
-    		</div>
-    	
-    		<div class="artistItem">
-    			<img src="C418.png" alt="Picture of the artist C418 showcasing his side profile with the text 'C418' and a galaxy overlay on the top." width="200px">
-    			<p class="artistName">C418</p>
-    			<p class="artistStatsTitle">Statistics</p>
-    			<p class="aritstStats">4,262 minutes<br>1,413 streams</p>
-    			<p class="artistStatsTitle">First Streamed</p>
-    			<p class="aritstStats">August 2020</p>
-    			<p class="artistStatsTitle">Favourite Song</p>
-    			<p class="aritstStats">Chirp</p>
-    			<div class="artistLine"></div>
-    		</div>
-    	
-    		<div class="artistItem">
-    			<img src="TameImpala.png" alt="Picture of the artist Tame Impala standing in a backyard scratching his head." width="200px">
-    			<p class="artistName">Tame Impala</p>
-    			<p class="artistStatsTitle">Statistics</p>
-    			<p class="aritstStats">6,136 minutes<br>1,364 streams</p>
-    			<p class="artistStatsTitle">First Streamed</p>
-    			<p class="aritstStats">March 2018</p>
-    			<p class="artistStatsTitle">Favourite Song</p>
-    			<p class="aritstStats">Let It Happen</p>
-    			<div class="artistLine"></div>
-    		</div>
-    	
-    		<div class="artistItem">
-    			<img src="Coldplay.png" alt="Picture of the band Coldplay standing in a line formation with a rainbow hue." width="200px">
-    			<p class="artistName">Coldplay</p>
-    			<p class="artistStatsTitle">Statistics</p>
-    			<p class="aritstStats">4,900 minutes<br>1,322 streams</p>
-    			<p class="artistStatsTitle">First Streamed</p>
-    			<p class="aritstStats">July 2017</p>
-    			<p class="artistStatsTitle">Favourite Song</p>
-    			<p class="aritstStats">Viva La Vida</p>
-    			<div class="artistLine"></div>
-    		</div>
-    	</div>
-    	
-        <div class="artistNumbersGrid">
-    		<p class="artistNumber">1</p>
-    		<p class="artistNumber">2</p>
-    		<p class="artistNumber">3</p>
-    		<p class="artistNumber">4</p>
-    	</div>
-	</div>
-    
-    <div id="artistDotLine">
-    	<img src="DotLine.png" alt="Line of multicolored dots, each split into two different colors." width="900px">
+      <h2>Artists</h2>
+
+      <div class="artistItemGrid">
+        <div class="artistItem">
+          <img src="ArianaGrande.png" alt="Picture of the singer Ariana Grande clasping her hands, with a blue light highlighting her face." width="200px">
+          <p class="artistName">Ariana Grande</p>
+          <p class="artistStatsTitle">Statistics</p>
+          <p class="aritstStats">4,508 minutes<br>1,503 streams</p>
+          <p class="artistStatsTitle">First Streamed</p>
+          <p class="aritstStats">April 2017</p>
+          <p class="artistStatsTitle">Favourite Song</p>
+          <p class="aritstStats">Forever Boy</p>
+          <div class="artistLine"></div>
+        </div>
+
+        <div class="artistItem">
+          <img src="C418.png" alt="Picture of the artist C418 showcasing his side profile with the text 'C418' and a galaxy overlay on the top." width="200px">
+          <p class="artistName">C418</p>
+          <p class="artistStatsTitle">Statistics</p>
+          <p class="aritstStats">4,262 minutes<br>1,413 streams</p>
+          <p class="artistStatsTitle">First Streamed</p>
+          <p class="aritstStats">August 2020</p>
+          <p class="artistStatsTitle">Favourite Song</p>
+          <p class="aritstStats">Chirp</p>
+          <div class="artistLine"></div>
+        </div>
+
+        <div class="artistItem">
+          <img src="TameImpala.png" alt="Picture of the artist Tame Impala standing in a backyard scratching his head." width="200px">
+          <p class="artistName">Tame Impala</p>
+          <p class="artistStatsTitle">Statistics</p>
+          <p class="aritstStats">6,136 minutes<br>1,364 streams</p>
+          <p class="artistStatsTitle">First Streamed</p>
+          <p class="aritstStats">March 2018</p>
+          <p class="artistStatsTitle">Favourite Song</p>
+          <p class="aritstStats">Let It Happen</p>
+          <div class="artistLine"></div>
+        </div>
+
+        <div class="artistItem">
+          <img src="Coldplay.png" alt="Picture of the band Coldplay standing in a line formation with a rainbow hue." width="200px">
+          <p class="artistName">Coldplay</p>
+          <p class="artistStatsTitle">Statistics</p>
+          <p class="aritstStats">4,900 minutes<br>1,322 streams</p>
+          <p class="artistStatsTitle">First Streamed</p>
+          <p class="aritstStats">July 2017</p>
+          <p class="artistStatsTitle">Favourite Song</p>
+          <p class="aritstStats">Viva La Vida</p>
+          <div class="artistLine"></div>
+        </div>
+      </div>
+
+      <div class="artistNumbersGrid">
+        <p class="artistNumber">1</p>
+        <p class="artistNumber">2</p>
+        <p class="artistNumber">3</p>
+        <p class="artistNumber">4</p>
+      </div>
     </div>
-    
+
+    <div id="artistDotLine">
+      <img src="DotLine.png" alt="Line of multicolored dots, each split into two different colors." width="900px">
+    </div>
+
     <!-- ALBUMS -->
     <div class="albums" id="albums">
-    	<h2>Albums</h2>
-    	
-    	<div class="albumGrid">
-    		<div class="albumItem pink2ndBackground">
-    			<img src="Currents.png" alt="Semi-transparent photo of the album Currents by Tame Impala. Silver ball creating a pink current in a purple and silver sea." width="200px">
-    			<p class="albumStats">4,409 minutes | 986 streams</p>
-    			<p class="albumNameSingle">Currents</p>
-    			<p class="albumArtistSingle">by Tame Impala</p>
-    			<p class="albumNumberSingle">1</p>
-    		</div>
-    	
-    		<div class="albumItem orange2ndBackground">
-    			<img src="MinecraftVolumeAlpha.png" alt="Semi-transparent photo of the album Minecraft — Volume Alpha by C418. Minecraft grass block." width="200px">
-    			<p class="albumStats">1,914 minutes | 788 streams</p>
-    			<p class="albumNameDouble">Minecraft — Volume Alpha</p>
-    			<p class="albumArtistDouble">by C418</p>
-    			<p class="albumNumberDouble">2</p>
-    		</div>
-    	
-    		<div class="albumItem blackBackground">
-    			<img src="WhoReallyCares.png" alt="Semi-transparent photo of the album Who Really Cares by TV Girl. Blue man, embracing a pink woman." width="200px">
-    			<p class="albumStats">2,052 minutes | 702 streams</p>
-    			<p class="albumNameDouble">Who Really<br>Cares</p>
-    			<p class="albumArtistDouble">by TV Girl</p>
-    			<p class="albumNumberDouble">3</p>
-    		</div>
-    	
-    		<div class="albumItem blackBackground">
-    			<img src="MinecraftVolumeBeta.png" alt="Semi-transparent photo of the album Minecraft — Volume Beta by C418. Orange, black, and yellow Minecraft block." width="200px">
-    			<p class="albumStats">2,347 minutes | 625 streams</p>
-    			<p class="albumNameDouble">Minecraft — Volume Beta</p>
-    			<p class="albumArtistDouble">by C418</p>
-    			<p class="albumNumberDouble">4</p>
-    		</div>
-    	
-    		<div class="albumItem pink2ndBackground">
-    			<img src="SongsofHer’s.png" alt="Semi-transparent photo of the album Songs of Her’s by Her’s. Clothes scattered on the floor, the underwear says 'hers,' with a window reflection." width="200px">
-    			<p class="albumStats">2,148 minutes | 558 streams</p>
-    			<p class="albumNameDouble">Songs of<br>Her’s</p>
-    			<p class="albumArtistDouble">by Her’s</p>
-    			<p class="albumNumberDouble">5</p>
-    		</div>
-    	
-    		<div class="albumItem orange2ndBackground">
-    			<img src="FineLine.png" alt="Semi-transparent photo of the album Fine Line by Harry Styles. The singer Harry Styles is in a fisheye perspective, with a hand reaching out to him." width="200px">
-    			<p class="albumStats">1,778 minutes | 535 streams</p>
-    			<p class="albumNameSingle">Fine Line</p>
-    			<p class="albumArtistSingle">by Harry Styles</p>
-    			<p class="albumNumberSingle">6</p>
-    		</div>
-    	</div>
+      <h2>Albums</h2>
+
+      <div class="albumGrid">
+        <div class="albumItem pink2ndBackground">
+          <img src="Currents.png" alt="Semi-transparent photo of the album Currents by Tame Impala. Silver ball creating a pink current in a purple and silver sea." width="200px">
+          <p class="albumStats">4,409 minutes | 986 streams</p>
+          <p class="albumNameSingle">Currents</p>
+          <p class="albumArtistSingle">by Tame Impala</p>
+          <p class="albumNumberSingle">1</p>
+        </div>
+
+        <div class="albumItem orange2ndBackground">
+          <img src="MinecraftVolumeAlpha.png" alt="Semi-transparent photo of the album Minecraft — Volume Alpha by C418. Minecraft grass block." width="200px">
+          <p class="albumStats">1,914 minutes | 788 streams</p>
+          <p class="albumNameDouble">Minecraft — Volume Alpha</p>
+          <p class="albumArtistDouble">by C418</p>
+          <p class="albumNumberDouble">2</p>
+        </div>
+
+        <div class="albumItem blackBackground">
+          <img src="WhoReallyCares.png" alt="Semi-transparent photo of the album Who Really Cares by TV Girl. Blue man, embracing a pink woman." width="200px">
+          <p class="albumStats">2,052 minutes | 702 streams</p>
+          <p class="albumNameDouble">Who Really<br>Cares</p>
+          <p class="albumArtistDouble">by TV Girl</p>
+          <p class="albumNumberDouble">3</p>
+        </div>
+
+        <div class="albumItem blackBackground">
+          <img src="MinecraftVolumeBeta.png" alt="Semi-transparent photo of the album Minecraft — Volume Beta by C418. Orange, black, and yellow Minecraft block." width="200px">
+          <p class="albumStats">2,347 minutes | 625 streams</p>
+          <p class="albumNameDouble">Minecraft — Volume Beta</p>
+          <p class="albumArtistDouble">by C418</p>
+          <p class="albumNumberDouble">4</p>
+        </div>
+
+        <div class="albumItem pink2ndBackground">
+          <img src="SongsofHer’s.png" alt="Semi-transparent photo of the album Songs of Her’s by Her’s. Clothes scattered on the floor, the underwear says 'hers,' with a window reflection." width="200px">
+          <p class="albumStats">2,148 minutes | 558 streams</p>
+          <p class="albumNameDouble">Songs of<br>Her’s</p>
+          <p class="albumArtistDouble">by Her’s</p>
+          <p class="albumNumberDouble">5</p>
+        </div>
+
+        <div class="albumItem orange2ndBackground">
+          <img src="FineLine.png" alt="Semi-transparent photo of the album Fine Line by Harry Styles. The singer Harry Styles is in a fisheye perspective, with a hand reaching out to him." width="200px">
+          <p class="albumStats">1,778 minutes | 535 streams</p>
+          <p class="albumNameSingle">Fine Line</p>
+          <p class="albumArtistSingle">by Harry Styles</p>
+          <p class="albumNumberSingle">6</p>
+        </div>
+      </div>
     </div>
-    
+
     <div id="albumStar">
-    	<img src="Star.png" alt="Pink, white, and orange star." width="300">
+      <img src="Star.png" alt="Pink, white, and orange star." width="300">
     </div>
-    
+
     <!-- GENRES -->
     <div class="genres" id="genres">
-    	<div id="sheetMusic">
-    	<h2>Genres</h2>
-    	
-    	<img src="TrebleClef.png" alt="Sheet music with treble clef and a decrescendo from forte to piano." width="1000px">
-    	
-    	<ol>
-    		<div id="genre1"><li class="genreNumber"><div class="genreLabel pink">Alternative</div></li></div>
-    		<div id="genre2"><li class="genreNumber"><div class="genreLabel orange">Pop</div></li></div>
-    		<div id="genre3"><li class="genreNumber"><div class="genreLabel pink">Hip-hop/rap</div></li></div>
-    		<div id="genre4"><li class="genreNumber"><div class="genreLabel orange">Electronic</div></li></div>
-    	</ol>
-    	</div>
+      <div id="sheetMusic">
+        <h2>Genres</h2>
+
+        <img src="TrebleClef.png" alt="Sheet music with treble clef and a decrescendo from forte to piano." width="1000px">
+
+        <ol>
+          <div id="genre1">
+            <li class="genreNumber">
+              <div class="genreLabel pink">Alternative</div>
+            </li>
+          </div>
+          <div id="genre2">
+            <li class="genreNumber">
+              <div class="genreLabel orange">Pop</div>
+            </li>
+          </div>
+          <div id="genre3">
+            <li class="genreNumber">
+              <div class="genreLabel pink">Hip-hop/rap</div>
+            </li>
+          </div>
+          <div id="genre4">
+            <li class="genreNumber">
+              <div class="genreLabel orange">Electronic</div>
+            </li>
+          </div>
+        </ol>
+      </div>
     </div>
   </body>
 </html>
